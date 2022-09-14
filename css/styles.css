@@ -71,7 +71,10 @@ body {
   font-size: 14px;
   line-height: 1, 142;
   text-decoration: none;
+  position: relative;
+  /* border: 2px solid black; */
 }
+
 .navigation {
   width: 254px;
   margin-left: 93px;
@@ -86,6 +89,16 @@ body {
 
 .active {
   color: var(--blue-text-color);
+}
+.active::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: var(--blue-text-color);
+  height: 4px;
+  border-radius: 2px;
+  width: 100%;
+  top: 44px;
 }
 
 .header-contact {
