@@ -399,6 +399,35 @@ body {
   margin-bottom: 20px;
 }
 
+.portfolio-section .card .img-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-section .card .img-box > img {
+  display: block;
+  height: 100%;
+}
+.portfolio-section .overlay {
+  background: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  height: 294px;
+  top: 0;
+  transform: translate(0, 100%);
+  transition: 250ms;
+}
+
+.portfolio-section .overlay > p {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  padding: 49px 45px 49px 24px;
+}
+
+.portfolio-section .card:hover .overlay {
+  transform: translate(0, 0);
+}
 .filter-button {
   cursor: pointer;
   background: var(--button-secondary-color);
