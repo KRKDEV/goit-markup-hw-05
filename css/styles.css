@@ -229,6 +229,32 @@ body {
 .about-section {
   padding-bottom: 94px;
 }
+.about-menu li {
+  position: relative;
+}
+
+.about-menu li img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-menu .img-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1, 142;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 27px;
+}
+
 .team-section {
   background: #f5f4fa;
   padding-top: 94px;
