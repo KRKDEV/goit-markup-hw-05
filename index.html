@@ -44,7 +44,7 @@
             <div class="slider-section">
                 <div class="container">
                     <h1 class="slider-title">Efektywne Rozwiązania dla Waszego Biznesu</h1>
-                    <button class="slider-button" type="button">Zamów usługę</button>
+                    <button class="slider-button" type="button" data-modal-open>Zamów usługę</button>
                 </div>
             </div>
             <div class="article-section">
@@ -322,6 +322,11 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="close-button" data-modal-close>X</button>
+            </div>
+        </div>
         <script src="./js/modal.js"></script>
     </body>
 </html>

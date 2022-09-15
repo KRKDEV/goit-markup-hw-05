@@ -20,6 +20,7 @@ body {
   color: var(--dark-text-color, #212121);
   font-family: "Roboto", sans-serif;
   margin: auto;
+  position: relative;
 }
 
 .logo {
@@ -72,6 +73,7 @@ body {
   line-height: 1, 142;
   text-decoration: none;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /* border: 2px solid black; */
 }
 
@@ -109,6 +111,7 @@ body {
   font-size: 14px;
   line-height: 1, 142;
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address > .header-contact:not(:last-child) {
@@ -322,6 +325,7 @@ body {
   border-radius: 50%;
   fill: var(--icons-primary-color);
   cursor: pointer;
+  transition: fill, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .social-icon {
@@ -357,10 +361,12 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
   fill: var(--icons-primary-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-menu a:hover {
@@ -562,6 +568,7 @@ body {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--icons-secondary-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-links a:hover,
@@ -570,3 +577,51 @@ body {
 }
 
 /* ===== END FOOTER ===== */
+
+/* ===== MODAL WINDOW ===== */
+
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 250ms;
+  transform: translate(0) translateY(0) scale(1);
+  opacity: 1;
+}
+
+.modal {
+  position: fixed;
+  width: 528px;
+  height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  margin-top: 226px;
+  display: block;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(0) translateY(0%) scale(0);
+}
